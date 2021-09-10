@@ -487,19 +487,16 @@ public class LocationPermissionsPlugin implements MethodCallHandler, StreamHandl
     public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
         activity = binding.getActivity();
         binding.addRequestPermissionsResultListener(createAddRequestPermissionsResultListener(this));
-        Log.e("LLLLLLLLL", "onAttachedToActivity");
     }
 
     @Override
     public void onDetachedFromActivityForConfigChanges() {
         this.activity = null;
-        Log.e("LLLLLLLLL", "onDetachedFromActivityForConfigChanges");
     }
 
     @Override
     public void onReattachedToActivityForConfigChanges(@NonNull ActivityPluginBinding binding) {
         activity = binding.getActivity();
-        Log.e("LLLLLLLLL", "onReattachedToActivityForConfigChanges");
     }
 
     @Override
